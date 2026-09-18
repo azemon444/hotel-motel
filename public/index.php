@@ -7,7 +7,7 @@ define('LARAVEL_START', microtime(true));
 
 // Auto-detect the application base — works when the app lives one level above
 // the web root (standard Laravel) or directly inside it (shared hosting/cPanel).
-$base = is_file(__DIR__.'/vendor/autoload.php') ? __DIR__ : __DIR__.'/../';
+$base = is_file(__DIR__.'/vendor/autoload.php') ? __DIR__.'/' : __DIR__.'/../';
 
 // Determine if the application is in maintenance mode...
 if (file_exists($maintenance = $base.'storage/framework/maintenance.php')) {
