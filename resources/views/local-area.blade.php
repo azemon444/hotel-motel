@@ -1,0 +1,47 @@
+@extends('layouts.app')
+@section('title', 'Local Area | Sardar Catering Amsterdam')
+@section('content')
+<section class="page-header" style="position:relative;overflow:hidden"><div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&q=80') center/cover;opacity:.18"></div><div class="container" style="position:relative"><h1>Local Area</h1><p>Vondelpark is an 8-minute walk, the Jordaan and Canal Ring are 12 minutes by bike, Museumplein is 15 minutes by tram and Central Station is 10 minutes.</p><p style="font-size:11px;opacity:.7;margin-top:8px"><i class="fas fa-bicycle"></i> Bike hire is available at reception, trams 1, 7 and 17 stop at the corner, and we'll give you a free bike map.</p></div></section>
+
+<section class="section"><div class="container">
+    <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:start">
+        <div class="map-container" style="margin-bottom:0"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.2!2d4.84!3d52.362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c3c1b3c3d7%3A0x0!2sLadogameerhof+174+Amsterdam!5e0!3m2!1sen!2snl!4v1700000000000" width="100%" height="520" style="border:0;border-radius:12px" allowfullscreen loading="lazy" title="Map"></iframe>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><a href="https://maps.google.com/?q=Ladogameerhof+174+Amsterdam" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-directions"></i> Get Directions</a><a href="tel:+31686099826" class="btn btn-sm btn-outline"><i class="fas fa-phone"></i> Call Reception</a><span style="font-size:11px;color:var(--text-muted);align-self:center"><i class="fas fa-map-marker-alt"></i> Ladogameerhof 174, 1060RE — quiet residential, central</span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+            <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:20px"><h4 style="font-weight:700;margin-bottom:12px"><i class="fas fa-walking"></i> Walk • Cycle • Tram</h4>
+                <div style="display:flex;flex-direction:column;gap:10px;font-size:13px">
+                    <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:6px 0"><span><i class="fas fa-tree" style="color:var(--success)"></i> Vondelpark</span><strong>8 min walk / 3 min bike</strong></div>
+                    <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:6px 0"><span><i class="fas fa-shopping-bag"></i> Foodhallen</span><strong>5 min walk</strong></div>
+                    <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:6px 0"><span><i class="fas fa-landmark"></i> Museumplein</span><strong>15 min tram 1</strong></div>
+                    <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:6px 0"><span><i class="fas fa-water"></i> Jordaan / 9 Streets</span><strong>12 min bike</strong></div>
+                    <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:6px 0"><span><i class="fas fa-train"></i> Central Station</span><strong>10 min tram</strong></div>
+                    <div style="display:flex;justify-content:space-between;padding:6px 0"><span><i class="fas fa-plane"></i> Schiphol</span><strong>20 min via Sloterdijk</strong></div>
+                </div>
+                <p style="font-size:11px;color:var(--text-muted);margin-top:8px">GVB day pass €9.50 at reception. OV-chipkaart accepted. Bikes €14/day.</p>
+            </div>
+            <div style="background:rgba(26,54,93,.06);border:1px solid rgba(26,54,93,.12);border-radius:12px;padding:20px"><h4 style="font-weight:700;margin-bottom:8px"><i class="fas fa-star"></i> Reception Tips</h4><ul style="font-size:13px;color:var(--text-light);line-height:1.7"><li>Rent a bike — Amsterdam is flat and the safest cycling city we know</li><li>Book museums ahead; Van Gogh and the Anne Frank House sell out</li><li>Albert Heijn is 3 minutes away for kitchenette stock-ups</li><li>Free canal bike map at check-in</li></ul><a href="{{ route('booking') }}" class="btn btn-primary btn-sm" style="margin-top:12px">Book & Get Map at Check-in</a></div>
+        </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top:32px">
+        <div class="location-card" style="overflow:hidden;padding:0"><img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=600&q=80" style="height:160px;object-fit:cover;width:100%" alt="Vondelpark"><div style="padding:16px"><i class="fas fa-tree" style="color:var(--success)"></i><h4>Vondelpark — Green Heart</h4><p>8 min walk. Open-air theatre, lakes, running loop 3.3 km, cafes De Vondeltuin & Vertigo. Picnic like a local.</p><small style="color:var(--primary);font-weight:700">Open 24h • Free</small></div></div>
+        <div class="location-card" style="overflow:hidden;padding:0"><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80" style="height:160px;object-fit:cover;width:100%" alt="Museums"><div style="padding:16px"><i class="fas fa-landmark" style="color:var(--primary)"></i><h4>Museumplein — Culture Mile</h4><p>Rijksmuseum, Van Gogh Museum, Stedelijk, Concertgebouw. 15 min by tram 1 from hotel + 5 min walk.</p><small style="color:var(--primary);font-weight:700">Book tickets in advance</small></div></div>
+        <div class="location-card" style="overflow:hidden;padding:0"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80" style="height:160px;object-fit:cover;width:100%" alt="Canals"><div style="padding:16px"><i class="fas fa-water" style="color:#3182ce"></i><h4>Canal Ring UNESCO</h4><p>12 min cycle. Jordaan, 9 Streets, houseboats, boutique shopping & cafes. Evening canal cruise recommended.</p><small style="color:var(--primary);font-weight:700">UNESCO World Heritage</small></div></div>
+        <div class="location-card" style="overflow:hidden;padding:0"><img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&q=80" style="height:160px;object-fit:cover;width:100%" alt="Central"><div style="padding:16px"><i class="fas fa-train"></i><h4>Central Station & Centre</h4><p>10 min by tram, 15 min cycle. Dam Square, Red Light, shopping Kalverstraat. Trains to Schiphol 14 min.</p><small style="color:var(--primary);font-weight:700">Tram 1, 7, 17 at corner</small></div></div>
+        <div class="location-card" style="overflow:hidden;padding:0"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" style="height:160px;object-fit:cover;width:100%" alt="Schiphol"><div style="padding:16px"><i class="fas fa-plane"></i><h4>Schiphol Airport</h4><p>20 min by train from Sloterdijk (1 change) or 30 min by taxi €45. Reception can book.</p><small style="color:var(--primary);font-weight:700">Flight + bike box storage</small></div></div>
+        <div class="location-card" style="overflow:hidden;padding:0"><img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80" style="height:160px;object-fit:cover;width:100%" alt="Foodhallen"><div style="padding:16px"><i class="fas fa-shopping-bag"></i><h4>Oud-West & Foodhallen</h4><p>5 min walk. Trendy indoor food hall (street food), bars Ten Kate, De Hallen film & shops. Local favorite.</p><small style="color:var(--primary);font-weight:700">Food hall 12:00-22:00</small></div></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;align-items:center;">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=800&q=80" style="border-radius:12px;height:360px;object-fit:cover;width:100%" alt="Live like local">
+        <div>
+            <span style="background:rgba(26,54,93,.08);color:var(--primary);padding:6px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase">Live Like a Local</span>
+            <h3 style="font-size:24px;font-weight:700;margin:12px 0">A quiet base, close to the centre</h3>
+            <p style="color:var(--text-light);line-height:1.7;font-size:14px">You're on a quiet Oud-West street, but the tram stops at the corner. It's a 12-minute bike ride to the Jordaan, an 8-minute walk to Vondelpark and 15 minutes by tram to the museums. In the evening, Foodhallen is 5 minutes away and the Ten Kate market is handy for kitchenette supplies. Mornings start with breakfast from 6:30, and the fitness room is always open.</p>
+            <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap"><span style="background:var(--bg-alt);border:1px solid var(--border);padding:6px 12px;border-radius:20px;font-size:11px;font-weight:700">Bike €14/day</span><span style="background:var(--bg-alt);border:1px solid var(--border);padding:6px 12px;border-radius:20px;font-size:11px;font-weight:700">Tram day pass €9.50</span><span style="background:var(--bg-alt);border:1px solid var(--border);padding:6px 12px;border-radius:20px;font-size:11px;font-weight:700">Free bike map</span></div>
+            <a href="{{ route('booking') }}" class="btn btn-primary" style="margin-top:16px;"><i class="fas fa-calendar-check"></i> Check Availability</a>
+        </div>
+    </div>
+</div></section>
+@endsection
