@@ -2,6 +2,7 @@
 <div class="payment-wrapper">
         <div class="payment-card" id="paymentCard">
             <div class="payment-header">
+                <a href="{{ route('booking') }}" class="back-link"><i class="fas fa-arrow-left"></i> Back to booking</a>
                 <div class="logo">
                     <i class="fas fa-lock"></i>
                 </div>
@@ -39,7 +40,7 @@
                         <span class="value" id="summarySubtotal">-</span>
                     </div>
                     <div class="summary-row">
-                        <span class="label">Tax (7%)</span>
+                        <span class="label">City tax (7%)</span>
                         <span class="value" id="summaryTax">-</span>
                     </div>
                     <div class="summary-row total">
