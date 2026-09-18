@@ -21,7 +21,8 @@
 /auth.json
 /boost.json
 /opencode.json
-/bootstrap/cache
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
 /node_modules
 /public/fonts-manifest.dev.json
 /public/hot
