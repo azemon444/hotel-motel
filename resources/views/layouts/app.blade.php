@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ filemtime(public_path('css/styles.css')) }}">
+    @php $cssVersion = filemtime(is_file($cssFile = public_path('css/styles.css')) ? $cssFile : base_path('css/styles.css')); @endphp<link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ $cssVersion }}">
     @stack('head')
 </head>
 <body>
