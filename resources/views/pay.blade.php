@@ -3,6 +3,7 @@
         <div class="payment-card" id="paymentCard">
             <div class="payment-header">
                 <a href="{{ route('booking') }}" class="back-link"><i class="fas fa-arrow-left"></i> Back to booking</a>
+                <div class="brand"><i class="fas fa-bed"></i> Sardar Catering Amsterdam</div>
                 <div class="logo">
                     <i class="fas fa-lock"></i>
                 </div>
@@ -62,9 +63,9 @@
                 </div>
 
                 <!-- Loading State -->
-                <div id="stripeLoading" style="text-align: center; padding: 40px;">
+                <div id="stripeLoading" class="payment-loading">
                     <div class="processing-spinner"></div>
-                    <p style="color: #718096; font-size: 14px;">Loading secure payment form...</p>
+                    <p>Loading secure payment form...</p>
                 </div>
 
                 <form id="paymentForm" style="display: none;">
@@ -72,11 +73,11 @@
                         <h3>Cardholder Information</h3>
                         <div class="form-group">
                             <label>Full Name</label>
-                            <input type="text" id="cardName" placeholder="John Smith" required>
+                            <input type="text" id="cardName" placeholder="John Smith" autocomplete="name" required>
                         </div>
                         <div class="form-group">
                             <label>Email Address</label>
-                            <input type="email" id="cardEmail" placeholder="john@example.com" required>
+                            <input type="email" id="cardEmail" placeholder="john@example.com" autocomplete="email" required>
                         </div>
                     </div>
 
