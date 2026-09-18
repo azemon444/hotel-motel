@@ -2,6 +2,8 @@
 .DS_Store
 .env
 .env.backup
+/bdgss-hotel.env
+/setup.php
 .env.production
 .phpactor.json
 .phpunit.result.cache

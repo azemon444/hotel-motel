@@ -1,9 +1,8 @@
 <IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
-    </IfModule>
-
     RewriteEngine On
+
+    # Block direct access to sensitive files/folders
+    RewriteRule ^(\.env|app|bootstrap|config|database|routes|resources|tests|vendor|node_modules|\.git)(/|$) - [F,L]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
