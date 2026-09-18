@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="csrf-token" content="{{ csrf_token() }}"><meta name="description" content="Secure Stripe checkout for your Sardar Catering Amsterdam suite booking."><link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}"><link rel="stylesheet" href="{{ asset('css/styles.css') }}"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><title>Secure Checkout | Sardar Catering Amsterdam</title><script src="https://js.stripe.com/v3/"></script></head><body>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="csrf-token" content="{{ csrf_token() }}"><meta name="description" content="Secure Stripe checkout for your Sardar Catering Amsterdam suite booking."><link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}"><link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ filemtime(public_path('css/styles.css')) }}"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><title>Secure Checkout | Sardar Catering Amsterdam</title><script src="https://js.stripe.com/v3/"></script></head><body>
 <div class="payment-wrapper">
         <div class="payment-card" id="paymentCard">
             <div class="payment-header">
@@ -107,6 +107,16 @@
                         <i class="fas fa-lock"></i>
                         <span>Pay Now</span>
                     </button>
+
+                    <div class="checkout-trust">
+                        <div class="stripe-badge"><i class="fab fa-stripe"></i> Secure payment powered by Stripe</div>
+                        <div class="card-logos">
+                            <i class="fab fa-cc-visa" style="color: #1a1f71;"></i>
+                            <i class="fab fa-cc-mastercard" style="color: #eb001b;"></i>
+                            <i class="fab fa-cc-amex" style="color: #006fcf;"></i>
+                            <i class="fab fa-cc-apple-pay" style="color: #000;"></i>
+                        </div>
+                    </div>
                 </form>
 
                 <div class="security-info">

@@ -565,7 +565,7 @@ ul { list-style: none; }
 .amount-display .currency { font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: rgba(255, 255, 255, 0.75); display: inline-flex; align-items: center; gap: 10px; }
 .amount-display .currency::before, .amount-display .currency::after { content: ''; width: 26px; height: 1px; background: rgba(255, 255, 255, 0.35); }
 .amount-display .amount { display: block; font-size: 46px; font-weight: 800; line-height: 1.1; color: #fff; margin-top: 6px; }
-.amount-display .amount::before { content: '\20AC'; font-size: 26px; font-weight: 700; vertical-align: super; color: rgba(255, 255, 255, 0.85); margin-right: 3px; }
+.amount-display .amount::before { content: '\20AC'; display: inline-block; font-size: .55em; font-weight: 700; vertical-align: .2em; margin-right: 3px; color: rgba(255, 255, 255, 0.9); }
 .amount-display .period { font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.7); margin-top: 10px; }
 .payment-card .booking-summary { position: static; top: auto; box-shadow: none; background: white; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; margin-bottom: 24px; }
 .payment-card .booking-summary h3 { font-size: 14px; font-weight: 800; color: var(--text); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
@@ -605,6 +605,10 @@ ul { list-style: none; }
 .security-info { display: flex; gap: 18px; justify-content: center; margin-top: 20px; font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--text-muted); flex-wrap: wrap; }
 .security-item { display: inline-flex; align-items: center; gap: 7px; }
 .security-item i { color: var(--primary); font-size: 13px; }
+.checkout-trust { text-align: center; }
+.checkout-trust .stripe-badge { margin-top: 14px; }
+.card-logos { display: flex; justify-content: center; gap: 12px; margin-top: 12px; opacity: .55; }
+.card-logos i { font-size: 30px; }
 @media (max-width: 640px) {
     .payment-wrapper { padding: 16px 12px; }
     .payment-header { padding: 22px 38px 18px; }
